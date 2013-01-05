@@ -1,0 +1,32 @@
+Binary Evolution Game
+
+This piece of software inspired by the Conway's Game of Life.
+
+The field is two-dimensional orthogonal closed grid of cells each 
+of which is in one of two possible states, alive or dead. 
+
+Every alive cell belongs to any of two possible races: black or white.
+
+Evolution occurs using the following simple rules:
+
+- Any live cell with seven live neighbours dies due to overpopulation;
+- Any live cell with less then seven live neighbours and with more live         
+  neighbours of opposite race then its own, becomes dead due to struggle for survival;
+- Any dead cell becomes alive if it has at least one live neighbour and the 
+  newborn cell acquire a race of majority, if black neighbours equals white neighbours then cell remains dead;
+  
+  
+The following format accepted for testing patterns:
+
+[field size][number_of_black_cells][number_of_white_cells]
+'-' dead cell
+'.' white cell
+'X' black cell
+
+
+Based on my observation, there are any kind of possible solutions in this game:
+- black wins;
+- white wins;
+- draw;
+- oscillation;
+Some solutions require significant amount of generations, say for 17-sized field(stable1.dat) it takes more then 12300000 generations to complete.
